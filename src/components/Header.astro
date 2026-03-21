@@ -1,12 +1,29 @@
 ---
+const { children } = Astro.props;
+
 
 ---
 
 <header class="header">
     <nav class="header__nav">
+        {children}
     </nav>
 </header>
 
 <style lang="scss">
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-block: 25px;
 
+    &__nav {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        border-radius: 30px;
+        background-color: white;
+    }
+}
 </style>
